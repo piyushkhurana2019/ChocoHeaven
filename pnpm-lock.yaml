@@ -98,9 +98,6 @@ importers:
       '@types/mongoose':
         specifier: ^5.11.96
         version: 5.11.97
-      autoprefixer:
-        specifier: ^10.4.20
-        version: 10.4.21(postcss@8.5.3)
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -158,9 +155,6 @@ importers:
       tailwind-merge:
         specifier: ^2.5.5
         version: 2.6.0
-      tailwindcss-animate:
-        specifier: ^1.0.7
-        version: 1.0.7(tailwindcss@3.4.17)
       vaul:
         specifier: ^0.9.6
         version: 0.9.9(@types/react-dom@19.0.4(@types/react@19.0.12))(@types/react@19.0.12)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -177,12 +171,18 @@ importers:
       '@types/react-dom':
         specifier: ^19
         version: 19.0.4(@types/react@19.0.12)
+      autoprefixer:
+        specifier: ^10.4.21
+        version: 10.4.21(postcss@8.5.3)
       postcss:
-        specifier: ^8
+        specifier: ^8.5.3
         version: 8.5.3
       tailwindcss:
         specifier: ^3.4.17
         version: 3.4.17
+      tailwindcss-animate:
+        specifier: ^1.0.7
+        version: 1.0.7(tailwindcss@3.4.17)
       typescript:
         specifier: ^5
         version: 5.8.2
