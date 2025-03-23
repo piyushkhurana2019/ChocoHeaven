@@ -660,7 +660,7 @@ export default function Home() {
       <footer className="w-full border-t border-pink-200 dark:border-pink-800/20 py-6 md:py-0 bg-gradient-to-r from-pink-50 to-purple-50 dark:from-gray-950 dark:to-gray-950">
         <div className="container flex flex-col gap-4 md:h-24 md:flex-row md:items-center md:justify-between md:gap-0">
           <p className="text-center text-sm leading-loose text-gray-600 dark:text-gray-400 md:text-left">
-            © This Website is Developed in 30 minutes, get yours now <a 
+            © This Website is Developed under 30 minutes, get yours now <a 
               href="#" 
               onClick={(e) => {
                 e.preventDefault();
