@@ -330,10 +330,10 @@ export default function Home() {
                         className="object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                     </div>
-                    <div className="p-4">
+                    <div className="p-4 flex flex-col h-[200px]">
                       <h3 className="font-semibold text-lg">{item.name}</h3>
-                      <p className="text-sm text-gray-600 dark:text-gray-400">{item.description}</p>
-                      <div className="mt-2 flex items-center justify-between">
+                      <p className="text-sm text-gray-600 dark:text-gray-400 flex-1 overflow-y-auto">{item.description}</p>
+                      <div className="flex items-center justify-between">
                         <span className="font-medium text-pink-600 dark:text-pink-400">{item.price}</span>
                         <Button
                           variant="ghost"
@@ -376,14 +376,13 @@ export default function Home() {
                 className="md:w-1/2 space-y-4"
               >
                 <span className="inline-block bg-purple-100 dark:bg-purple-900/30 px-3 py-1 rounded-full text-sm font-medium text-purple-600 dark:text-purple-400">
-                  Chocolate Heaven
+                  Choco Heaven
                 </span>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl bg-gradient-to-r from-purple-600 to-pink-500 text-transparent bg-clip-text font-display">
-                  Artisan Chocolates
+                  Brownies
                 </h2>
                 <p className="text-gray-600 dark:text-gray-400 md:text-xl/relaxed">
-                  Our chocolates are handcrafted with premium cocoa beans and filled with unique flavors that will take
-                  you on a sensory journey.
+                  Indulge in our decadent brownies - rich, fudgy dessert bars crafted with premium chocolate, creamy butter, and the finest ingredients. Each bite delivers an intense chocolate experience, with a perfectly crisp top and an irresistibly gooey center. Choose from our luxurious selection including classic dark chocolate, velvety Nutella swirl, caramelized Biscoff, creamy white chocolate chunks, salted caramel, and double chocolate chip. Our brownies are baked fresh daily to ensure the ultimate chocolate lover's experience.
                 </p>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Button className="bg-gradient-to-r from-purple-600 to-pink-500 hover:opacity-90 transition-opacity shadow-lg shadow-purple-500/20">
@@ -404,7 +403,7 @@ export default function Home() {
                 transition={{ duration: 0.8 }}
                 className="md:w-1/2 grid grid-cols-2 gap-4"
               >
-                {[1, 2, 3, 4].map((item, index) => (
+                {[1, 2, 3, 4].map((_, index) => (
                   <motion.div
                     key={index}
                     whileHover={{ scale: 1.05, rotate: index % 2 === 0 ? 2 : -2 }}
@@ -412,8 +411,8 @@ export default function Home() {
                     className="overflow-hidden rounded-2xl shadow-xl"
                   >
                     <Image
-                      src={`/placeholder.svg?height=400&width=400`}
-                      alt={`Chocolate variety ${item}`}
+                      src={brownies[index].image}
+                      alt={`Chocolate variety ${index + 1}`}
                       width={400}
                       height={400}
                       className="rounded-2xl object-cover aspect-square"
@@ -704,69 +703,85 @@ export default function Home() {
 
 const featuredItems = [
   {
-    name: "Chocolate Truffle Box",
-    description: "Assorted handcrafted truffles with unique flavors",
-    price: "Free",
-    image: "/placeholder.svg?height=400&width=400",
+    name: "Chocolate Truffle Cake",
+    description: "This indulgent treat combines the perfect balance of sweet,bitter and creamy textures,making it a beloved dessert for chocolate lovers",
+    price: "450/-",
+    image: "https://cdn.dotpe.in/longtail/store-items/5879759/mLCpXasG.jpeg",
   },
   {
     name: "Classic Cheesecake",
     description: "Creamy New York style cheesecake with cracker crust",
-    price: "Free",
-    image: "/placeholder.svg?height=400&width=400",
+    price: "199/-",
+    image: "https://thescranline.com/wp-content/uploads/2023/05/NEW-YORK-STYLE-CHEESECAKE-S-01.jpg",
   },
   {
     name: "Bomboloni Box",
-    description: "Italian filled donuts with various fillings",
-    price: "Free",
-    image: "/placeholder.svg?height=400&width=400",
+    description: "Italian filled donuts with biscoff,nutella,oreo,vanilla custard fillings",
+    price: "899/-",
+    image: "https://hellocupcakescompany.com/wp-content/uploads/2019/02/Artboard-12.jpg",
   },
   {
-    name: "Chocolate Fudge Cake",
-    description: "Rich, moist chocolate cake with fudge frosting",
-    price: "Free",
-    image: "/placeholder.svg?height=400&width=400",
+    name: "Bento brownie fudge ",
+    description: "Rich, dense texture of a brownie with the smooth, melt in your mouth goodness of fudge It is sserved in bento box which makes it easy to enjoy as a treat or gift",
+    price: "389/-",
+    image: "https://i.pinimg.com/736x/31/35/2c/31352c1ee4d0e1e6ccf029a4a6b60bae.jpg",
   },
 ]
 
 const cakeItems = [
   {
     name: "Triple Chocolate Cake",
-    description: "Three layers of chocolate perfection",
-    image: "/placeholder.svg?height=300&width=300",
+    description: "Three layers of chocolate perfection consists of dark,milk,and white",
+    image: "https://sallysbakingaddiction.com/wp-content/uploads/2013/04/triple-chocolate-cake-4.jpg",
   },
   {
     name: "Strawberry Cheesecake",
-    description: "Creamy cheesecake with fresh strawberry topping",
-    image: "/placeholder.svg?height=300&width=300",
+    description: "Creamy cheesecake with fresh strawberry topping ",
+    image: "https://drivemehungry.com/wp-content/uploads/2022/07/strawberry-cheesecake-11-500x500.jpg",
   },
   {
     name: "Tiramisu Cake",
     description: "Coffee-soaked layers with mascarpone cream",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "https://bonnibakery.com/wp-content/uploads/2021/02/Tiramisu-Cake2303-1.jpg",
   },
 ]
 
 const pastryItems = [
   {
-    name: "Almond Croissant",
-    description: "Buttery croissant filled with almond cream",
-    price: "Free",
+    name: "Mini cake",
+    description: "Perfect for 1-2 persons these little cakes come in a variety of flavours like strawberry, pineapple,mango,chocolate",
+    price: "119/-",
   },
   {
-    name: "Fruit Danish",
-    description: "Flaky pastry with seasonal fruit filling",
-    price: "Free",
+    name: "Cupcakes",
+    description: "Cupcakes come in a variety of flavors from classic vanilla and chocolate to more adventurous combinations like red velvet or mawa",
+    price: "89/-",
   },
   {
-    name: "Chocolate Éclair",
-    description: "Choux pastry filled with cream and topped with chocolate",
-    price: "Free",
+    name: "Jar cake",
+    description: "It is a trendy and visually appealing served in a jar,layering moist cake with rich frosting.",
+    price: "149/-",
   },
   {
-    name: "Bomboloni",
-    description: "Italian donuts filled with custard or jam",
-    price: "Free",
+    name: "Cheesecake shots",
+    description: "Comes in various flavors like lotus biscoff,oreo nutella,blueberry",
+    price: "129/-",
   },
 ]
+
+const brownies = [
+  {
+    image: "https://www.sweetishhousemafia.com/cdn/shop/files/LOTUS_BISCOFF_BROWNIE_2_1200x.jpg?v=1732185374",
+  },
+  {
+    image: "https://www.piesandtacos.com/wp-content/uploads/2017/12/Nutella-brownies-17.jpg",
+  },
+  {
+    image: "https://i0.wp.com/bryonysbakes.com/wp-content/uploads/2021/07/D2E892A5-3FDD-448E-A056-D5DA66C8090D.jpg?ssl=1",
+  },
+  {
+    image: "https://soomfoods.com/cdn/shop/articles/Soom_ChocolateTahiniBrownies_gsvysh_1600x.jpg?v=1685115924",
+  },
+]
+  
 
