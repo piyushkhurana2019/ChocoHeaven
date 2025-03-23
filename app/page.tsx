@@ -93,6 +93,9 @@ export default function Home() {
       <header className="sticky top-0 z-50 w-full backdrop-blur-md bg-white/70 dark:bg-black/70 border-b border-pink-200 dark:border-pink-800">
         <div className="container flex h-16 items-center justify-between relative mobile-menu-container">
           <Link href="/" className="flex items-center gap-2">
+            <div className="w-10 h-10 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 flex items-center justify-center overflow-hidden">
+              <Image src="/logo.jpeg" alt="Choco Heaven" width={100} height={100} className="rounded-full" />
+            </div>
             <span className="text-xl font-bold bg-gradient-to-r from-pink-500 to-purple-600 text-transparent bg-clip-text">
               Choco Heaven
             </span>
@@ -543,12 +546,13 @@ export default function Home() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-                    className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-white hover:bg-white/20 transition-colors border border-white/20 shadow-xl"
+                    className="flex flex-col h-full bg-white/10 backdrop-blur-sm rounded-lg p-6 text-white hover:bg-white/20 transition-colors border border-white/20 shadow-xl"
                   >
-                    <h3 className="text-xl font-semibold mb-2">{item.name}</h3>
-                    <p className="text-sm text-white/80 mb-4">{item.description}</p>
-                    <span className="block text-lg font-medium">{item.price}</span>
-  
+                    <div className="flex-grow">
+                      <h3 className="text-xl font-semibold mb-2">{item.name}</h3>
+                      <p className="text-sm text-white/80">{item.description}</p>
+                    </div>
+                    <span className="block text-lg font-medium mt-4">{item.price}</span>
                   </motion.div>
                 ))}
               </div>
@@ -636,8 +640,9 @@ export default function Home() {
                 className="space-y-4 bg-white/80 dark:bg-gray-950/80 backdrop-blur-sm p-6 rounded-2xl shadow-xl border border-pink-100 dark:border-pink-900/20"
               >
                 <div className="grid gap-4">
-                  
-                 
+                  <div className="w-20 h-20 mx-auto rounded-full bg-gradient-to-r from-pink-500 to-purple-600 flex items-center justify-center overflow-hidden">
+                    <Image src="/logo.jpeg" alt="Choco Heaven" width={100} height={100} className="rounded-full" />
+                  </div>
                   
                   <Button 
                     className="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:opacity-90 transition-opacity"
