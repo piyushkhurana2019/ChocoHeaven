@@ -599,7 +599,9 @@ export default function Home() {
                     variant="outline"
                     className="border-pink-300 dark:border-pink-700 hover:bg-pink-50 dark:hover:bg-pink-950/30"
                   >
+                    <Link  href="https://maps.app.goo.gl/kp3Ajmn9CNQAmu2dA" target="_blank">
                     Visit Our Store
+                    </Link>
                   </Button>
                 </div>
                 <div className="flex gap-4 mt-6">
